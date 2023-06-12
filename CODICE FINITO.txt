@@ -1,0 +1,605 @@
+# sito iscrizione openday UNINT 2023/2024
+
+class bcolors:
+  rosso = '\033[91m'
+  verde = '\033[92m'
+  RESET = '\033[0m'
+
+#  print
+introduzione = ('''UNINT - Studio è Viaggio
+L'Università degli Studi Internazionali di Roma Vi da' il benvenuto al sito di iscrizione per l'Openday dell'Ateneo''')
+avvertenza = (bcolors.rosso+"RISPONDERE ALLE DOMANDE CON IL NUMERO ASSEGNATO ALL'OPZIONE DESIDERATA"+bcolors.RESET )
+opzione = ("Prego selezionare un'opzione valida")
+altreinfo = ("Se necessiti di altre informazioni visita il sito dell'Ateneo")
+promozione = (bcolors.verde+ ''' L'Ateneo sta promuovendo l'utilizzo di visori per la realtà virutale forniti a tutte le matricole dell'anno 2023/2024. 
+  A causa di un grande numero di iscritti all'OpenDay si invita gli studenti interessati a rendersi disponibili per partecipare in loco tramite realtà virtuale.'''+bcolors.RESET)
+conferma = ('''Conferma avvenuta iscrizione all'OpenDay UNINT virtuale.
+  Di seguito è fornito il link per l'iscrizione e l'accesso all'Openday virtuale:''')
+
+#  input
+richiesta = (''' Confermi di voler partecipare all'OpenDay di Ateneo UNINT nel Metaverso? Se la risposta sarà no verrà conferamta l'iscrzione in presenza
+                    1. Si
+                    2. No
+                      ''')
+vuoi_openday = (''' Sei interessato a partecipare all'OpenDay di questo corso di laurea? 
+                    1. Si
+                    2. No
+                    ''')
+inserire_titolo = ('''Inserire il titolo di studi: 
+                    1. Diploma di liceo 
+                    2. Laurea Triennale          
+                    ''')
+
+#        triennale
+vuoi_domanda = (''' Vorresti essere sottoposto a una domanda di indirizzamento?
+                    1. Si
+                    2. No
+                    ''')
+domanda_indirizzamento = (''' Quali sono i tuoi interessi? 
+                    1. Lingue
+                    2. Politiche/Attualità
+                    3. Business
+                    4. Criminalità e Investigazione
+                    ''')
+domanda_intertri = (''' Sei interessato a qualcuno dei corsi laurea proposti dall'Ateneo?
+                    1. Si
+                    2. No 
+                    ''')
+individuazione_triennale = (''' Hai già individuato il corso di studi che vorrai intraprendere?
+                    1. Si
+                    2. No
+                    ''')
+elenco_triennali = (''' Scegliere il corso di laurea a cui si è interessati: 
+                    1. Lingue per l'Interpretariato e la Traduzione (L-12) 
+                    2. Economia Internazionale e Management Digitale (L-18)
+                    3. Scienze Politiche, Sicurezza Internazionale e Criminalità (L-36)
+                    ''')
+triennali = (''' l'OpenDay avrà luogo il giorno 18/07/2023 presso l'Aula Magna ai rispettivi orari:
+                    1. 12:00 - Lingue per L'Interpretariato e la Traduzione
+                    2. 11:00 - Economia Internazionale e Managemetn Digitale
+                    3. 10:00 - Scienze Politiche, Sicurezza Internazionale e Criminalità
+Seleziona una delle tre opzione per la conferma di iscrizione all'OpenDay dell'Ateneo
+                    ''')
+conferma_lingue = (" Conferma avvenuta iscrizione all'Openday dell'Ateneo in presenza che si terrà il 18/07/2023 alle ore 12:00 in Aula Magna")
+conferma_economia = (" Conferma avvenuta iscrizone all'Openday dell'Ateneo in presenza che si terrà il 18/07/2023 alle ore 11:00 in Aula Magna ")
+conferma_politiche = (" Conferma di avvenuta iscrizione all'Openday dell'Ateneo in presenza che si terrà il 18/07/2023 alle ore 10:00 in Aula Magna ")
+proposta_triennali = ('''L'Ateneo propone i sottostanti corsi di laurea triennale: 
+                    1. Lingue per l'Interpretariato e la Traduzione (L-12) 
+                    2. Economia Internazionale e Management Digitale (L-18)
+                    3. Scienze Politiche, Sicurezza Internazionale e Criminalità (L-36)''')
+lingue_triennale = (''' L'Ateneo offre il corso di laurea triennale L-12 "Lingue per l'Interpretariato e la Traduzione"
+Questo corso di laurea è suddiviso in due percorsi:
+                    1. Percorso Bilingue, che propone due indirizzi
+                          - Mediazione linguisica e culturale per la gestione dei flussi migratori
+                          - Mediazione linguistica e culturale nei processi comunicativi
+                    2. Percorso Trilingue
+Tutti i corsi sopra elencati, durante l'OpenDay, verrano presentati in unico turno, che si terrà il giorno 18/07/2023 alle ore 12 in Aula Magna.''')
+politiche_triennale = (''' L'Ateneo offre il corso di laurea triennale L-36 "Scienze Politiche, Sicurezza Internazionale e Criminalità"
+L'OpenDay di questo corso si terrà il giorno 18/07/2023 alle ore 11:00 in Aula Magna.''')
+economia_triennale = (''' L'Ateneo offre il corso di laurea triennale L-18 "Economia Internazionale e Management Digitale".
+L'OpenDay di questo corso si terrà il  giorno 18/07/2023 alle ore 10:00''')
+
+#          magistrale
+scelta_magi = ("Di seguito potrai scegliere la facoltà al quale sei interessato")
+magistrali = ('''Quale tra le seguenti facoltà ti interessa? 
+                    1. Facoltà di interpretariato e traduzione
+                    2. Facoltà di economia
+                    3. Facoltà di scienze della politica e delle dinamiche psico-sociali
+                    ''')
+lingue_magistrali = ('''La facoltà di interpretariato e traduzione si divide in : 
+    1.Interpretariato e traduzione- LM94 
+    2. Lingue per la didattica innovativa e l'interculturalità- LM37.
+    L'OpenDay di entrambi i corsi si svolgerà nello stesso turno il giorno 30/05/2023 alle ore 14:30''')
+economia_magistrali = ('''La facoltà di economia offre: Economia e management internazionale - LM77
+l'OpenDay si svolgerà giorno 30 maggio 2023 alle ore 11:20 vuoi partecipare?
+                    1.Si
+                    2.No 
+                    ''')
+polpsico_magistrali = ('''La Facoltà di scienze della politica e delle dinamiche psico-sociali si divide in:
+    1.Investigazione, criminalità e sicurezza internazionale LM52
+    2. Psicologia dei processi di apprendimento e di inclusione LM51
+    A quale delle due si è interessati?       
+                    ''')
+psicologia_magistrali = (''' L'OpenDay di Psicologia dei processi di apprendimento e di inclusione si terrà il 30/05/2023 alle ore 10:30
+Confermi di voler partecipare?
+                    1.Si
+                    2. No 
+                    ''')
+conferma_lingmagi = ("Conferma iscrizione all'OpenDay dell'Ateneo in presenza, che si terrà giorno 30 maggio 2023 alle 14:30 ")
+conferma_ecomagi = ("Confermata iscrizione all'OpenDay dell'Ateneo in presenza, che si terrà giorno 30 maggio alle ore 11:30")
+conferma_invegmagi = ('''Confermata iscrizione all'OpenDay dell'Ateneo in presenza, che si terrà giorno 30 maggio 2023 alle 09:30''')
+conferma_psicomagi = ("Confermata iscrizione all'OpenDay dell'Ateneo in presenza, che si terrà giorno 30 maggio 2023 alle 10:30")
+legenda_grafici = (''' "Grafici inerenti le facoltà"
+LEGENDA:
+corso 1 = Interpretariato e traduzione
+corso 2 = Lingue per la didattica innovativa e l'interculturalità
+corso 3 = Economia e management internazionale
+corso 4 = Investigazione, criminalità e sicurezza internazionale
+Barra rossa = Media nazionale''')
+
+
+
+print(introduzione)
+print(avvertenza)
+
+# FINE TRIENNALE
+
+# s
+def conf_lingtri () :
+  while 1 == 1:
+    s = input(richiesta)
+    if s == "1":
+      print(conferma)
+      break
+    elif s == "2":
+      print(conferma_lingue) 
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# t
+def conf_ecotri () :
+  while 1 == 1:
+    t = input(richiesta)
+    if t == "1":
+      print(conferma)
+      break
+    elif t == "2":
+      print(conferma_economia)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# u
+def conf_poltri () :
+  while 1 == 1 :
+    u = input(richiesta)
+    if u == "1":
+      print(conferma)
+      break
+    elif u == "2":
+      print(conferma_politiche)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# r 
+def date_triennale():
+  while 1 == 1 :
+    r = input(triennali)
+    if r == "1":
+      print(promozione)
+      conf_lingtri()
+    elif r == "2":
+      print(promozione)
+      conf_ecotri()
+      break
+    elif r == "3":
+      print(promozione)
+      conf_poltri ()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# m 
+def inter_eco_tri():
+  while 1 == 1:
+    m = input(vuoi_openday)
+    if m == "1":
+      print(promozione)
+      conf_ecotri()
+      break
+    elif m == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+      
+
+# l
+def inter_pol_tri():
+  while 1 == 1:
+    l = input(vuoi_openday)
+    if l == "1":
+      print(promozione)
+      conf_poltri ()
+      break
+    elif l == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+    
+
+# i
+def inter_ling_tri():
+  while 1 == 1:
+    i = input(vuoi_openday)
+    if i == "1":
+      print(promozione)
+      conf_lingtri()
+      break
+    elif i == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+#h                                        
+def interessi():
+  while 1 == 1:
+    h = input(domanda_indirizzamento)
+    if h == "1":
+      print(lingue_triennale)
+      inter_ling_tri()
+      break
+    elif h == "2" or h == "4":                 
+      print(politiche_triennale)
+      inter_pol_tri()
+      break
+    elif h == "3":
+      print(economia_triennale)
+      inter_eco_tri()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+  
+
+# q
+def inter_corsitri() :
+  while 1 == 1:
+    q = input(domanda_intertri)
+    if q == "1":
+      date_triennale()
+      break
+    elif q == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+#g
+def questionario ():
+  while 1 == 1:
+    g = input(vuoi_domanda)
+    if g == "1":
+      interessi()
+      break
+    elif g == "2":
+      print(proposta_triennali)
+      inter_corsitri()       
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# c
+def scelta_triennale ():
+    while 1 == 1:
+      c = input(elenco_triennali)
+      if c == "1":
+        print(promozione)
+        conf_lingtri()
+        break
+      elif c == "2":
+        print(promozione)
+        conf_ecotri()
+        break
+      elif c == "3":
+        print(promozione)
+        conf_poltri ()
+        break
+      else:
+        print(avvertenza)
+        print(opzione)
+
+
+# b
+def corso_triennale():
+  while 1 == 1:
+    b = input(individuazione_triennale)
+    if b == "1":
+      scelta_triennale()
+      break
+    elif b == "2":
+      questionario()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# INIZIO TRIENNALE
+
+# FINE MAGISTRALE
+
+# am
+def proposta_psicomagi():
+  while 1 == 1:
+    am = input(richiesta)
+    if am == "1":
+      print(conferma)
+      break
+    elif am == "2":
+      print(conferma_psicomagi)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ar 
+def inter_psicomagi():
+  while 1 == 1:
+    ar = input(psicologia_magistrali)
+    if ar == "1":
+      print(promozione)
+      proposta_psicomagi()
+      break
+    elif ar == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ah
+def proposta_invegmagi():
+  while 1 == 1:
+    ah = input(richiesta)
+    if ah == "1":
+      print(conferma)
+      break
+    elif ah == "2":
+      print(conferma_invegmagi)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ib
+def inter_invegmagi():
+  while 1 == 1:
+    ib = input(vuoi_openday)
+    if ib == "1":
+      print(promozione)
+      proposta_invegmagi()
+      break
+    elif ib == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ag
+def politiche_magistrali ():
+  while 1 == 1:
+    ag= input(polpsico_magistrali)
+    if ag == "1":
+      inter_invegmagi()
+      break
+    elif ag == "2":
+      inter_psicomagi()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# af
+def proposta_ecomagi():
+  while 1 == 1:
+    af = input(richiesta)
+    if af == "1":
+      print(conferma)
+      break
+    elif af == "2":
+      print(conferma_ecomagi)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# en
+def interesse_ecomagi():
+  while 1 == 1:
+    en = input(economia_magistrali)
+    if en == "1":
+      print(promozione)
+      proposta_ecomagi()
+      break
+    elif en == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ad
+def proposta_lingmagi ():
+  while 1 == 1:
+    ad = input(richiesta)
+    if ad == "1":
+      print(conferma)
+      break
+    elif ad == "2":
+      print(conferma_lingmagi)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ia
+def inter_ling_magi ():
+  while 1 == 1:
+    ia = input(vuoi_openday)
+    if ia == "1":
+      print(promozione)
+      proposta_lingmagi ()
+      break
+    elif ia == "2":
+      print(altreinfo)
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+
+# ab
+def corsi_magistrali ():
+  while 1 == 1:
+    ab = input(magistrali)
+    if ab == "1":
+      print(lingue_magistrali)
+      inter_ling_magi ()
+      break
+    elif ab == "2":
+      interesse_ecomagi()
+      break
+    elif ab == "3":
+      politiche_magistrali ()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+
+# INIZIO MAGISTRALE
+
+def mostra_laureati_intempo(filetempo):
+  listacorsi= []
+  with open(filetempo) as my_file:
+    righe = my_file.readlines()
+    for riga in righe:
+      valori= riga.split(";")
+      valori[0] = valori[0].replace("[" , "")
+      valori[0] = valori[0].replace("]", "")
+      elementi = valori[0].split(",")
+      sinistra = []
+      for i in elementi:
+        sinistra.append(float(i))
+    #print(sinistra, flush=True) 
+      valori[1] = valori[1].replace("[" , "")
+      valori[1] = valori[1].replace("]", "")
+      elementi = valori[1].split(",")
+      destra = []
+      for i in elementi:
+        destra.append(float(i))
+      listacorsi.append(sinistra)
+      listacorsi.append(destra) 
+      
+    return(listacorsi)
+
+#a
+def titolo_studi ():
+  while 1 == 1:
+    a = input(inserire_titolo)
+    if a == "1":
+      corso_triennale()
+      break
+    elif a == "2":
+      print(scelta_magi)
+      print(legenda_grafici)
+      import matplotlib.pyplot as plt
+#grafico_tempo
+      x_corsi = (1,2,3,4)
+      y_media = [90,89.3,89.8,100] 
+      plt.bar(x_corsi, y_media)
+      plt.bar(1,90,color="pink")
+      plt.bar(2,89.3,color="purple")
+      plt.bar(3,89.8,color="green")
+      plt.bar(4,100, color="orange")
+      listacorsi = mostra_laureati_intempo("grafico_tempo.txt")
+      for i in range(0,8,2):
+         plt.plot (listacorsi[i], listacorsi[i+1], color="red")
+      plt.title(" Laureati entro la durata normale del corso")
+      plt.xlabel("Corsi")
+      plt.ylabel("Media Unint")
+      plt.ylim(50,max(y_media)+1)
+      plt.grid(False)
+      plt.xticks([1,2,3,4],["corso 1", "corso 2", "corso 3", " corso 4"])
+      plt.show()
+#grafico_occupati
+      x_corsi = (1,2,3,4)
+      y_media = [90.6,71.4,18.2,85.1] 
+      plt.bar(x_corsi, y_media)
+      plt.bar(1,90.6,color="pink")
+      plt.bar(2,71.4,color="purple")
+      plt.bar(3,18.2,color="green")
+      plt.bar(4,85.1, color="orange")
+      listacorsi = mostra_laureati_intempo("grafico_occupati.txt")
+      for i in range(0,8,2):
+         plt.plot (listacorsi[i], listacorsi[i+1], color="red")
+      plt.title(''' Laureati occupati a tre anni dal titolo.
+Laureati non impegnati in formazione non retribuita 
+che dichiarano di svolgere un'attività lavorativa e regolamentata da un contratto ''')
+      plt.xlabel("Corsi")
+      plt.ylabel("Media Unint")
+      plt.ylim(10,max(y_media)+1)
+      plt.grid(False)
+      plt.xticks([1,2,3,4],["corso 1", "corso 2", "corso 3", " corso 4"])
+      plt.show()
+#grafico_occupazione
+      x_corsi = (1,2,3,4)
+      y_media = [94.9,59.3,77.4,92] 
+      plt.bar(x_corsi, y_media)
+      plt.bar(1,94.9,color="pink")
+      plt.bar(2,59.3,color="purple")
+      plt.bar(3,77.4,color="green")
+      plt.bar(4,92, color="orange")
+      listacorsi = mostra_laureati_intempo("grafico_occupazione.txt")
+      for i in range(0,8,2):
+         plt.plot (listacorsi[i], listacorsi[i+1], color="red")
+      plt.title(" Tasso di occupazione a cinque anni dal titolo")
+      plt.xlabel("Corsi")
+      plt.ylabel("Media Unint")
+      plt.ylim(50,max(y_media)+1)
+      plt.grid(False)
+      plt.xticks([1,2,3,4],["corso 1", "corso 2", "corso 3", " corso 4"])
+      plt.show()
+#grafico_soddisfazione
+      x_corsi = (1,2,3,4)
+      y_media = [0,8.6,8.1,68.5] 
+      plt.bar(x_corsi, y_media)
+      plt.bar(1,0,color ="pink")
+      plt.bar(2,8.6,color="purple")
+      plt.bar(3,8.1,color="green")
+      plt.bar(4,68.5, color="orange")
+      listacorsi = mostra_laureati_intempo("grafico_soddisfazione.txt")
+      for i in range(0,8,2):
+         plt.plot (listacorsi[i], listacorsi[i+1], color="red")
+      plt.title(" Soddisfazione per il lavoro solto (Media su una scala da 1 a 10)")
+      plt.xlabel("Corsi")
+      plt.ylabel("Media Unint")
+      plt.ylim(0,max(y_media)+1)
+      plt.grid(False)
+      plt.xticks([1,2,3,4],["corso 1", "corso 2", "corso 3", " corso 4"])
+      plt.show()
+      corsi_magistrali ()
+      break
+    else:
+      print(avvertenza)
+      print(opzione)
+titolo_studi()
